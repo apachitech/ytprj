@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: youtube-clone
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn ytprj.wsgi:application"
+databases:
+  - name: youtubeclone-db
+    plan: free
