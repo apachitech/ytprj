@@ -5,7 +5,7 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn ytprj.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
-      - key: DATABASE_URL
-      - key: SECRET_KEY
-      - key: DEBUG
-      - key: ALLOWED_HOSTS
+      - key: postgresql://ytprj_user:DJuvURt7e3eNsdE9gobiCqIBORJ4pn1h@dpg-d1h9kpmmcj7s73dkvgd0-a/ytprj
+      - key: django-insecure-7gv&ta3w$pk954=j3s6-)-ac+bzl7g88j(j^gw4r@v7e0+00v6
+      - key: False
+      - key: ytprj.onrender.com
