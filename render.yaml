@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: youtube-clone
+    name: ytprj
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn ytprj.wsgi:application"
-databases:
-  - name: youtubeclone-db
-    plan: free
+    startCommand: "gunicorn ytprj.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DATABASE_URL
+      - key: SECRET_KEY
+      - key: DEBUG
+      - key: ALLOWED_HOSTS
