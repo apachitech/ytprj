@@ -130,6 +130,10 @@ AUTHENTICATION_BACKENDS = [
     # Your custom backends (if any)
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+  "https://ytprj.onrender.com",
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
