@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
 # Allow Render host
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(" ")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split()
 
 
 # Application definition
@@ -130,9 +130,7 @@ AUTHENTICATION_BACKENDS = [
     # Your custom backends (if any)
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-  "https://ytprj.onrender.com",
-]
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split()
 
 
 # Internationalization
